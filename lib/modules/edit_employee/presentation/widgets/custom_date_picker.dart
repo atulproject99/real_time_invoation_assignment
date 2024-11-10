@@ -40,9 +40,8 @@ class CustomDatePicker extends StatelessWidget {
                     initialDate:
                         DateOption.getDateForTitle(_startDateController.text),
                     onDateSelected: (date) {
-                      _startDateController.text = date != null
-                          ? DateFormat('d MMM yyyy').format(date)
-                          : 'No Date';
+                      _startDateController.text =
+                          DateOption.getTitleForDate(date);
                     },
                   )),
             );
@@ -66,9 +65,8 @@ class CustomDatePicker extends StatelessWidget {
                     initialDate:
                         DateOption.getDateForTitle(_endDateController.text),
                     onDateSelected: (date) {
-                      _endDateController.text = date != null
-                          ? DateFormat('d MMM yyyy').format(date)
-                          : 'No Date';
+                      _endDateController.text =
+                          DateOption.getTitleForDate(date);
                     },
                   )),
             );
